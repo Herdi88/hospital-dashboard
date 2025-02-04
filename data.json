@@ -1,13 +1,17 @@
 4. Optional Static Data (`data.json`)
 ```json
 {
-  "surgeries": "10",
-  "doctors": "Dr. A, Dr. B, Dr. C",
-  "admittedPatients": "5",
-  "calls": "20",
-  "emergencyPatients": "8",
-  "nextAppointments": "15",
-  "todayAppointments": "12",
-  "topDoctors": "Dr. A, Dr. B"
+  "name": "hospital-dashboard",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "@shadcn/ui": "latest"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build"
+  }
 }
 ```
