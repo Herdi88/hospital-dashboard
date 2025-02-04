@@ -1,9 +1,4 @@
-1. `App.js`
-```javascript
 import React, { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
 
 export default function HospitalDashboard() {
   const [data, setData] = useState({
@@ -26,23 +21,23 @@ export default function HospitalDashboard() {
       <h1 className="text-2xl font-bold text-center">لوحة تحكم المستشفى</h1>
       <div className="grid grid-cols-2 gap-4">
         {Object.keys(data).map((key) => (
-          <Card key={key} className="p-4">
-            <CardContent>
-              <label className="block mb-2 text-right font-bold">
-                {translateLabel(key)}
-              </label>
-              <Input
-                type="text"
-                name={key}
-                value={data[key]}
-                onChange={handleChange}
-                className="text-right"
-              />
-            </CardContent>
-          </Card>
+          <div key={key} className="p-4 border rounded">
+            <label className="block mb-2 text-right font-bold">
+              {translateLabel(key)}
+            </label>
+            <input
+              type="text"
+              name={key}
+              value={data[key]}
+              onChange={handleChange}
+              className="w-full text-right border p-2 rounded"
+            />
+          </div>
         ))}
       </div>
-      <Button className="w-full">تحديث البيانات</Button>
+      <button className="w-full bg-blue-500 text-white py-2 rounded">
+        تحديث البيانات
+      </button>
     </div>
   );
 }
@@ -60,4 +55,3 @@ const translateLabel = (key) => {
   };
   return labels[key] || key;
 };
-```
