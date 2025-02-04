@@ -1,5 +1,3 @@
-4. Optional Static Data (`data.json`)
-```json
 {
   "name": "hospital-dashboard",
   "version": "1.0.0",
@@ -15,3 +13,4 @@
   }
 }
 ```
+
